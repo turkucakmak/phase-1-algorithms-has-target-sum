@@ -1,9 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i++) {
+    // look through the rest of the pile
+    for (let j = i + 1; j < array.length; j++) {
+      const sum = array[i] + array[j];
+      if (sum === target){
+        return true;
+      }
+}
+  }
+  return false;
 }
 
 /* 
-  Write the Big O time complexity of your function here
+  O(n^2)
 */
 
 /* 
@@ -11,7 +20,7 @@ function hasTargetSum(array, target) {
 */
 
 /*
-  Add written explanation of your solution here
+  if the function cannot end with return true, it ends with return false.
 */
 
 // You can run `node index.js` to view these console logs
